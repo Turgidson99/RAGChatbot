@@ -36,7 +36,8 @@ async function generateQueryResponse(chatElement) {
 
     const response = await fetch(url,requestOptions);
     const rag_response = await response.json();
-    messageElement.textContent = rag_response.translated_text;
+    console.log(rag_response.translated_text.response);
+    messageElement.textContent = rag_response.translated_text.response;
 
 }
 
